@@ -122,6 +122,24 @@ body {
   margin-top: 50px;
   font-size: 2.5rem;
 }
+.services-mob {
+  color: white;
+  display: block;
+  margin-top: 50px;
+  font-size: 2.5rem;
+}
+.partfolio-mob {
+  color: white;
+  display: block;
+  margin-top: 50px;
+  font-size: 2.5rem;
+}
+.contact-mob {
+  color: white;
+  display: block;
+  margin-top: 50px;
+  font-size: 2.5rem;
+}
 .rotate360 {
   animation: mymoveFirst;
   animation-duration: 1s;
