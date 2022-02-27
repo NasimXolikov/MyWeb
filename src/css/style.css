@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+.header_bg {
+  background: url(../img/header_bg.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 600px;
+  background-attachment: fixed;
+}
+.img-overlay {
+  width: 100%;
+  height: 100%;
+  background: #080A21E6;
+  opacity: 0, 89;
+}
+.header {
+  height: 60px;
+  border-bottom: 1px solid white;
+}
+.logo-wrapper {
+  display: grid;
+  height: 60px;
+}
+.logo {
+  width: 4rem;
+  align-self: center;
+}
+.about {
+  width: 100%;
+  display: grid;
+  height: 60px;
+  margin-left: 2rem;
+}
+.about a {
+  align-self: center;
+  justify-self: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.about a:hover {
+  color: white;
+}
+.services {
+  width: 100%;
+  display: grid;
+  height: 60px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.services a {
+  justify-self: center;
+  align-self: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.services a:hover {
+  color: white;
+}
+.partfolio {
+  width: 100%;
+  display: grid;
+  height: 60px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.partfolio a {
+  justify-self: center;
+  align-self: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.partfolio a:hover {
+  color: white;
+}
+.contact {
+  width: 100%;
+  display: grid;
+  height: 60px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.contact a {
+  justify-self: center;
+  align-self: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.contact a:hover {
+  color: white;
+}
+.burger {
+  display: none;
+}
+.nav-cont {
+  width: 100%;
+  height: 0px;
+  background-image: url(../img/bg-menu.jpg);
+  background-attachment: fixed;
+  left: 0;
+  display: none;
+}
+.about-mob {
+  color: white;
+  display: block;
+  margin-top: 50px;
+  font-size: 2.5rem;
+}
+.rotate360 {
+  animation: mymoveFirst;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes mymoveFirst {
+  0% {
+    transform: rotate(0deg);
+  }
+  /* можно назвать "шаг 2" */
+  100% {
+    transition: transform 1s;
+    transform: rotate(360deg);
+  }
+}
+.rotate-360 {
+  animation: mymoveSecond;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes mymoveSecond {
+  0% {
+    transform: rotate(0deg);
+  }
+  /* можно назвать "шаг 2" */
+  100% {
+    transition: transform 1s;
+    transform: rotate(-360deg);
+  }
+}
+.bg-blue {
+  width: 100%;
+  height: 300px;
+  background-color: #080b28;
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  padding-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .header_bg {
+    background: url(../img/header_bg.jpg);
+    background-size: 350%;
+    background-repeat: no-repeat;
+    height: 700px;
+    background-attachment: fixed;
+  }
+  .logo-wrapper {
+    width: 100%;
+    height: 60px;
+    display: grid;
+  }
+  .logo {
+    width: 3rem;
+    align-self: center;
+  }
+  .about {
+    display: none;
+  }
+  .services {
+    display: none;
+  }
+  .partfolio {
+    display: none;
+  }
+  .contact {
+    display: none;
+  }
+  .burger {
+    display: block;
+    width: 100%;
+    display: grid;
+    height: 60px;
+  }
+  .burger img {
+    width: 2rem;
+    align-self: center;
+    justify-self: end;
+  }
+}
