@@ -1,12 +1,32 @@
+// function of navbar
+
 $(document).ready(function() {
+    // icon and nav vars
+
     let burger = $('#burger');
     let navCont = $('#nav-cont');
     let cancel = $('#cancel');
+
+    // text vars
     let about = $('#about');
+    let services = $('#services');
+    let partfolio = $('#partfolio');
+    let contact = $('#contact');
+
+
+    //
     navCont.hide();
     cancel.hide();
     navCont.slideDown();
+
     about.hide();
+    services.hide();
+    partfolio.hide();
+    contact.hide();
+
+
+
+
     var navCalc = 0;
 
     burger.click(function() {
@@ -30,13 +50,26 @@ $(document).ready(function() {
             }
             imgsrc(burger);
 
-            setTimeout(function first() {
+            //text animation
+            setTimeout(function() {
                 about.show();
                 about.animate({ marginLeft: "100px", display: "block", }, 500)
-                navCalc = navCalc + 1;
-                // cancel.show();
-
             }, 500);
+
+            setTimeout(function() {
+                services.show();
+                services.animate({ marginLeft: "100px", display: "block", }, 500)
+            }, 1000);
+            setTimeout(function() {
+                partfolio.show();
+                partfolio.animate({ marginLeft: "100px", display: "block", }, 500)
+            }, 1500);
+            setTimeout(function() {
+                contact.show();
+                contact.animate({ marginLeft: "100px", display: "block", }, 500)
+            }, 2000);
+
+            //rotate burger
 
             $(burger).addClass('rotate360');
             $(burger).removeClass('rotate-360');
@@ -44,6 +77,7 @@ $(document).ready(function() {
 
 
 
+            navCalc = navCalc + 1;
 
         } else {
             $(burger).removeClass('rotate360');
@@ -57,9 +91,27 @@ $(document).ready(function() {
                 "display": "block",
                 "position": "absolute",
                 "height": "0px",
-                "transition-duration": "1s",
+                "transition-duration": "3s",
 
             });
+            //text animation
+            setTimeout(function() {
+                about.hide();
+                about.animate({ marginLeft: "0px", display: "block", }, 500)
+            }, 2000);
+
+            setTimeout(function() {
+                services.hide();
+                services.animate({ marginLeft: "0px", display: "block", }, 500)
+            }, 1500);
+            setTimeout(function() {
+                partfolio.hide();
+                partfolio.animate({ marginLeft: "0px", display: "block", }, 500)
+            }, 1000);
+            setTimeout(function() {
+                contact.hide();
+                contact.animate({ marginLeft: "0px", display: "block", }, 500)
+            }, 500);
 
             function imgsrc(img) {
                 if (img.attr("src") == "img/burger.png")
