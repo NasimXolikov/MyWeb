@@ -41,6 +41,9 @@ $(document).ready(function() {
                 "transition-duration": "2s",
                 "height": "1000px"
             });
+            burger.css({
+                "pointer-events": "none",
+            });
 
             function imgsrc(img) {
                 if (img.attr("src") == "img/burger.png")
@@ -53,23 +56,32 @@ $(document).ready(function() {
             //text animation
             setTimeout(function() {
                 about.show();
-                about.animate({ marginLeft: "100px", display: "block", }, 500)
+                about.animate({ marginLeft: "50px", display: "block", marginTop: "50px" }, 500)
             }, 500);
 
             setTimeout(function() {
                 services.show();
-                services.animate({ marginLeft: "100px", display: "block", }, 500)
+                services.animate({ marginLeft: "50px", display: "block", }, 500)
             }, 1000);
             setTimeout(function() {
                 partfolio.show();
-                partfolio.animate({ marginLeft: "100px", display: "block", }, 500)
+                partfolio.animate({ marginLeft: "50px", display: "block", }, 500)
             }, 1500);
             setTimeout(function() {
                 contact.show();
-                contact.animate({ marginLeft: "100px", display: "block", }, 500)
+                contact.animate({ marginLeft: "50px", display: "block", }, 500)
             }, 2000);
 
+
+
+            setTimeout(function() {
+                burger.css({
+                    "pointer-events": "auto",
+                });
+            }, 2200);
+
             //rotate burger
+
 
             $(burger).addClass('rotate360');
             $(burger).removeClass('rotate-360');
@@ -83,6 +95,10 @@ $(document).ready(function() {
             $(burger).removeClass('rotate360');
             $(burger).addClass('rotate-360');
 
+            burger.css({
+                "pointer-events": "none",
+            });
+
             $('body').css({
                 "overflowY": "auto"
             });
@@ -91,7 +107,7 @@ $(document).ready(function() {
                 "display": "block",
                 "position": "absolute",
                 "height": "0px",
-                "transition-duration": "3s",
+                "transition-duration": "3.1s",
 
             });
             //text animation
@@ -120,6 +136,13 @@ $(document).ready(function() {
                     img.attr("src", "img/burger.png");
             }
             imgsrc(burger);
+
+            setTimeout(function() {
+                burger.css({
+                    "pointer-events": "auto",
+                });
+            }, 3200);
+
             navCalc = navCalc - 1;
 
         }
