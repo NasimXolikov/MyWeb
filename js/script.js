@@ -1,7 +1,12 @@
 // function of navbar
-
+$(document).ready(function() {
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+    }, 1);
+});
 $(document).ready(function() {
     // icon and nav vars
+
 
     let burger = $('#burger');
     let navCont = $('#nav-cont');
@@ -240,11 +245,8 @@ $(document).ready(function() {
                 }
             })
             .type(`This is my personal site`, { delay: 1000 })
-            .type(', you can get to know my skills and work more closely.')
-
-
-
-        .go();
+            .type(', <br>you can get to know my skills and work more closely.')
+            .go();
     }, 6000);
 
 
@@ -269,6 +271,8 @@ $(document).ready(function() {
             block_show = true;
         }
     }, 2000);
+
+
 
     // $(window).scroll(function() {
     //     scrollTracking();
@@ -303,4 +307,23 @@ $(document).ready(function() {
     }, 100);
 
 
+
+    //second section animation
+
+    //img animation
+    let myPhoto = $('#my-photo-cont')
+
+
+    $(window).scroll(function() {
+        var wt = $(window).scrollTop();
+        var wh = $(window).height();
+        var et = myPhoto.offset().top;
+        var eh = myPhoto.outerHeight();
+        var dh = $(document).height();
+        if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+            myPhoto.css({
+                "marginLeft": "0px",
+            })
+        }
+    });
 });
