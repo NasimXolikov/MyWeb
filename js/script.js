@@ -12,7 +12,7 @@ $(document).ready(function() {
     let services = $('#services');
     let partfolio = $('#partfolio');
     let contact = $('#contact');
-
+    let hrFirst = $('#hr-first')
 
     //
     navCont.hide();
@@ -86,7 +86,9 @@ $(document).ready(function() {
             $(burger).addClass('rotate360');
             $(burger).removeClass('rotate-360');
 
-
+            setTimeout(function delHr() {
+                hrFirst.hide();
+            }, 400);
 
 
             navCalc = navCalc + 1;
@@ -142,6 +144,10 @@ $(document).ready(function() {
                     "pointer-events": "auto",
                 });
             }, 3200);
+
+            setTimeout(function() {
+                hrFirst.show();
+            }, 1750);
 
             navCalc = navCalc - 1;
 
@@ -234,7 +240,7 @@ $(document).ready(function() {
                 }
             })
             .type(`This is my personal site`, { delay: 1000 })
-            .type(',<br>you can get to know my skills and work more closely.')
+            .type(', you can get to know my skills and work more closely.')
 
 
 
@@ -264,13 +270,13 @@ $(document).ready(function() {
         }
     }, 2000);
 
-    $(window).scroll(function() {
-        scrollTracking();
-    });
+    // $(window).scroll(function() {
+    //     scrollTracking();
+    // });
 
-    $(document).ready(function() {
-        scrollTracking();
-    });
+    // $(document).ready(function() {
+    //     scrollTracking();
+    // });
 
 
     //animation of first section img
