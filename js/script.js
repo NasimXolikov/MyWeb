@@ -1,9 +1,5 @@
 // function of navbar
-$(document).ready(function() {
-    setTimeout(function() {
-        window.scrollTo(0, 0);
-    }, 1);
-});
+
 $(document).ready(function() {
     // icon and nav vars
 
