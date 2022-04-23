@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+.row {
+    --bs-gutter-x: 0 rem;
+}
+
 body {
     overflow-x: hidden;
     font-family: 'Days One', sans-serif;
@@ -24,7 +28,6 @@ body {
     width: 100%;
     height: 100%;
     background: #080A21E6;
-    opacity: 0, 89;
 }
 
 .header {
@@ -244,6 +247,7 @@ body {
     0% {
         transform: rotate(0deg);
     }
+
     /* можно назвать "шаг 2" */
     100% {
         transition: transform 1s;
@@ -261,6 +265,7 @@ body {
     0% {
         transform: rotate(0deg);
     }
+
     /* можно назвать "шаг 2" */
     100% {
         transition: transform 1s;
@@ -289,6 +294,7 @@ body {
 hr {
     height: 4px !important;
     background-color: #01939A;
+    width: 130%;
 }
 
 .welcome-text {
@@ -342,7 +348,7 @@ hr {
 }
 
 .my-photo {
-    width: 18vw;
+    width: 15vw;
     margin-top: 2rem;
     opacity: 1;
     transition-duration: 2s;
@@ -351,19 +357,86 @@ hr {
 .my-photo:hover {
     width: 50%;
     transition: 1s ease-in-out;
-    width: 20vw;
+    width: 15.5vw;
 }
 
 .my-photo:not(:hover) {
-    width: 18vw;
+    width: 15vw;
     transition: 0.5s;
 }
+
+
+
+
+/// Third section
+
+
+
+.third-section-bg {
+    background-image: url(../img/services.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 600px;
+    padding-top: 100px;
+    background-attachment: fixed;
+}
+
+.services-inThird-section {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 35px;
+    margin-bottom: 10vh;
+}
+
+.card-of-servise {
+    width: 100%;
+    height: 220px;
+    text-align: center;
+    color: whitesmoke;
+    padding-top: 10%;
+
+    &:hover {
+        background-color: rgb(29, 15, 221);
+        opacity: 0.7;
+        transition: 0.5s ease-in;
+    }
+    &:not(:hover) {
+        opacity: 0.8;
+        transition: 0.5s ease-in;
+    }
+    .circle{
+        text-align: center;
+        width: 88px;
+        height: 88px;
+        background-color:rgb(0, 26, 255) ;
+        border-radius: 360px;
+        line-height: 88px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+
+    }
+    .circle-text{
+        font-size: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 767px) {
     body {
         overflow-x: hidden;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
     .header_bg {
         background: url(../img/header_bg.jpg);
         background-size: 350%;
@@ -371,38 +444,50 @@ hr {
         height: 700px;
         background-attachment: fixed;
     }
+
     .logo-wrapper {
         width: 100%;
         height: 60px;
         display: grid;
+        padding-left: 15px;
     }
+
     .logo {
         width: 3rem;
         align-self: center;
     }
+
     .about {
         display: none;
     }
+
     .services {
         display: none;
     }
+
     .partfolio {
         display: none;
     }
+
     .contact {
         display: none;
     }
+
     .burger {
         display: block;
         width: 100%;
         display: grid;
         height: 60px;
     }
+
     .burger img {
         width: 2rem;
         align-self: center;
         justify-self: end;
+        position: relative;
+        left: -15px;
     }
+
     .hello-text {
         margin-top: 100px;
         font-family: 'Zen Dots', cursive;
@@ -410,20 +495,25 @@ hr {
         color: white;
         text-align: center;
     }
+
     .hello-text span {
         color: #ffc400;
     }
+
     .my-text {
         text-align: center;
     }
+
     .welcome-text {
         text-align: center;
     }
+
     .first-section-img {
         width: 100%;
         margin-top: 250px;
         transition-duration: 1s;
     }
+
     .bg-blue {
         width: 100%;
         height: 105%;
@@ -431,10 +521,15 @@ hr {
         color: white;
         padding-top: 50px;
     }
+
     .my-photo:not(:hover) {
         width: 70%;
         margin-top: 2rem;
         margin-left: 0px;
         transition-duration: 1s;
+    }
+
+    hr {
+        width: 100%;
     }
 }
