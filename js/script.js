@@ -292,7 +292,7 @@ $(document).ready(function() {
         if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
             if (block_show_second == null || block_show_second == false) {
                 firstSectionImg.css({
-                    "marginTop": "10vh",
+                    "marginTop": "50px",
                     "display": "block",
 
 
@@ -310,16 +310,16 @@ $(document).ready(function() {
     let myPhoto = $('#my-photo-cont')
 
 
-    // $(window).scroll(function() {
-    //     var wt = $(window).scrollTop();
-    //     var wh = $(window).height();
-    //     var et = myPhoto.offset().top;
-    //     var eh = myPhoto.outerHeight();
-    //     var dh = $(document).height();
-    //     if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
-    //         myPhoto.css({
-    //             "opacity": "1",
-    //         })
-    //     }
-    // });
+    $(window).scroll(function() {
+        var wt = $(window).scrollTop();
+        var wh = $(window).height();
+        var et = myPhoto.offset().top;
+        var eh = myPhoto.outerHeight();
+        var dh = $(document).height();
+        if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+            myPhoto.css({
+                "marginLeft": "0px",
+            })
+        }
+    });
 });
