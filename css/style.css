@@ -2,9 +2,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.row {
-  --bs-gutter-x: 0 rem;
-}
 body {
   overflow-x: hidden;
   font-family: 'Days One', sans-serif;
@@ -497,10 +494,11 @@ hr {
   }
   .bg-blue {
     width: 100%;
-    height: 105%;
+    height: 100%;
     background-color: #080b28;
     color: white;
     padding-top: 50px;
+    margin-bottom: 50px;
   }
   .my-photo:not(:hover) {
     width: 70%;
@@ -511,5 +509,14 @@ hr {
   }
   hr {
     width: 100%;
+  }
+  .third-section-bg {
+    background-image: url(../img/services.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 100%;
+    padding-top: 100px;
+    background-attachment: fixed;
   }
 }
