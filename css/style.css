@@ -500,6 +500,16 @@ hr {
     padding-top: 50px;
     margin-bottom: 50px;
   }
+  .my-photo {
+    width: 70%;
+    margin-top: 2rem;
+    margin-left: 0px;
+  }
+  .my-photo:hover {
+    width: 75%;
+    margin-top: 2rem;
+    margin-left: 0px;
+  }
   .my-photo:not(:hover) {
     width: 70%;
     margin-top: 2rem;
