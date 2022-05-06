@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --dark: #070707;
+    --transition: .75s cubic-bezier(.2, .6, 0, 1);
+    --sizeindex: calc(1vw + 1vh);
+}
+
+.carousel-section {
+    height: 1000px;
+    width: 100%;
+    background-color: var(--dark);
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.slider {
+    height: 100%;
+    transform: rotate(15deg);
+    overflow: visible;
+    top: 15vh;
+}
+
+.slier__wrapper {
+    transition: var(--transition)!important;
+    will-change: transform;
+}
+
+.slider__item {
+    max-height: 75vh;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.slider__img {
+    width: 125%;
+    height: 100%;
+    background-size: cover;
+    left: -25%;
+    position: absolute;
+    will-change: transform;
+    transition: var(--transition) !important;
+}
+
+.slider_bg {
+    z-index: 0;
+    transform: rotate(-20deg);
+    top: -150vh;
+    left: 5%;
+    opacity: 0.15;
+    filter: blur(120px) saturate(5);
+}
+
+.slider_bg .slider__item {
+    max-height: 100vh;
+}
+
+.slider__item.opened {
+    z-index: 2;
+    transform: rotate(-15deg) scale(1.5);
+    box-shadow: rgb(0 0 0/.75) 0 0 0 10000px;
+}
+
+.description {
+    font-size: calc(var(--sizeindex) * 0.8);
+    position: absolute;
+    top: 20vh;
+    left: 8vw;
+    max-width: 24vw;
+    opacity: 0.9;
+    transition: opacity var(--transition), transform var(--transition);
+    transition-duration: 3s;
+}
+
+.description .logo {
+    font-size: calc(var(--sizeindex) * 3.4);
+    font-weight: 900;
+    display: inline-block;
+    background: linear-gradient(45deg, #080b28, rgb(71, 99, 255), #059cdd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+}
+
+.description p {
+    transition: var(--transition);
+    margin-top: 3vh;
+    opacity: .9;
+    transform: translateY(2vh);
+}
+
+.description.hidden {
+    opacity: 0;
+    transition: var(--transition);
+    transform: translateY(5vh);
+}
