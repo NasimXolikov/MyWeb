@@ -392,19 +392,20 @@ hr {
 }
 .card-of-servise {
   width: 100%;
-  height: 220px;
+  height: 300px;
   text-align: center;
   color: whitesmoke;
+  opacity: 0;
   padding-top: 10%;
 }
 .card-of-servise:hover {
-  background-color: #1d0fdd;
-  opacity: 0.7;
+  background-color: rgba(5, 156, 221, 0.4);
+  opacity: 0.33;
   -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
 }
 .card-of-servise:not(:hover) {
-  opacity: 0.8;
+  opacity: 0;
   -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
 }
@@ -412,7 +413,7 @@ hr {
   text-align: center;
   width: 88px;
   height: 88px;
-  background-color: #001aff;
+  background-color: #059cdd;
   border-radius: 360px;
   line-height: 88px;
   margin: 0 auto;
@@ -420,6 +421,9 @@ hr {
 }
 .card-of-servise .circle-text {
   font-size: 30px;
+}
+.p-info {
+  margin-top: 15px;
 }
 @media screen and (max-width: 767px) {
   body {
@@ -530,14 +534,14 @@ hr {
   }
   .card-of-servise {
     width: 100%;
-    height: 220px;
+    height: 300px;
     text-align: center;
     color: whitesmoke;
     padding-top: 10%;
     margin-bottom: 30px;
   }
   .card-of-servise:hover {
-    background-color: #1d0fdd;
+    background-color: rgba(5, 156, 221, 0.4);
     opacity: 0.7;
     -webkit-transition: 0.5s ease-in;
     transition: 0.5s ease-in;
@@ -551,7 +555,7 @@ hr {
     text-align: center;
     width: 88px;
     height: 88px;
-    background-color: #001aff;
+    background-color: #059cdd;
     border-radius: 360px;
     line-height: 88px;
     margin: 0 auto;
@@ -562,5 +566,15 @@ hr {
     color: whitesmoke;
     font-size: 35px;
     margin-bottom: 30px;
+  }
+  .card-of-servise p {
+    font-size: 1.5rem;
+  }
+  .p-info {
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+  html {
+    overflow-x: hidden;
   }
 }
