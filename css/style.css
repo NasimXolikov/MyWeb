@@ -1,8 +1,8 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 body {
-  overflow-x: hidden;
   font-family: 'Days One', sans-serif;
 }
 .container-fluid {
@@ -31,7 +31,8 @@ body {
 }
 .logo {
   width: 4rem;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .about-border {
   position: absolute;
@@ -39,8 +40,10 @@ body {
   width: 0px;
   height: 2px;
   background-color: #cc00ff;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 .about {
   width: 100%;
@@ -56,11 +59,14 @@ body {
   width: 100%;
   height: 2px;
   background-color: #003cff;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 .about a {
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   justify-self: center;
   text-transform: uppercase;
   color: white;
@@ -85,12 +91,15 @@ body {
   width: 100%;
   height: 2px;
   background-color: #003cff;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 .services a {
   justify-self: center;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   text-transform: uppercase;
   color: white;
   font-size: 1rem;
@@ -115,12 +124,15 @@ body {
   width: 100%;
   height: 2px;
   background-color: #003cff;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 .partfolio a {
   justify-self: center;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   text-transform: uppercase;
   color: white;
   font-size: 1.2rem;
@@ -144,12 +156,15 @@ body {
   width: 100%;
   height: 2px;
   background-color: #003cff;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 .contact a {
   justify-self: center;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   text-transform: uppercase;
   color: white;
   font-size: 1.2rem;
@@ -202,33 +217,79 @@ body {
   color: white;
 }
 .rotate360 {
-  animation: mymoveFirst;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
+  -webkit-animation: mymoveFirst;
+          animation: mymoveFirst;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+@-webkit-keyframes mymoveFirst {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  /* можно назвать "шаг 2" */
+  100% {
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 @keyframes mymoveFirst {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   /* можно назвать "шаг 2" */
   100% {
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
     transition: transform 1s;
-    transform: rotate(360deg);
+    transition: transform 1s, -webkit-transform 1s;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 .rotate-360 {
-  animation: mymoveSecond;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
+  -webkit-animation: mymoveSecond;
+          animation: mymoveSecond;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
-@keyframes mymoveSecond {
+@-webkit-keyframes mymoveSecond {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   /* можно назвать "шаг 2" */
   100% {
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
     transition: transform 1s;
-    transform: rotate(-360deg);
+    transition: transform 1s, -webkit-transform 1s;
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+@keyframes mymoveSecond {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  /* можно назвать "шаг 2" */
+  100% {
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
 .hello-text {
@@ -257,7 +318,8 @@ hr {
   font-size: 1.4rem;
   color: white;
   display: none;
-  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   font-size: 3rem;
   margin-left: 300px;
   margin-top: 3rem;
@@ -270,7 +332,8 @@ hr {
 .first-section-img {
   width: 60vw;
   margin-top: 80vh;
-  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
 }
 .bg-blue {
   width: 100%;
@@ -297,15 +360,18 @@ hr {
   width: 15vw;
   margin-top: 2rem;
   opacity: 1;
-  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
 }
 .my-photo:hover {
   width: 50%;
+  -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
   width: 15.5vw;
 }
 .my-photo:not(:hover) {
   width: 15vw;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .third-section-bg {
@@ -334,10 +400,12 @@ hr {
 .card-of-servise:hover {
   background-color: rgba(5, 156, 221, 0.4);
   opacity: 0.33;
+  -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
 }
 .card-of-servise:not(:hover) {
   opacity: 0;
+  -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
 }
 .card-of-servise .circle {
@@ -376,7 +444,8 @@ hr {
   }
   .logo {
     width: 3rem;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
   .about {
     display: none;
@@ -398,7 +467,8 @@ hr {
   }
   .burger img {
     width: 2rem;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     justify-self: end;
     position: relative;
     left: -15px;
@@ -422,7 +492,8 @@ hr {
   .first-section-img {
     width: 100%;
     margin-top: 250px;
-    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
   }
   .bg-blue {
     width: 100%;
@@ -446,7 +517,8 @@ hr {
     width: 70%;
     margin-top: 2rem;
     margin-left: 0px;
-    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
   }
   hr {
     width: 100%;
@@ -470,10 +542,12 @@ hr {
   .card-of-servise:hover {
     background-color: rgba(5, 156, 221, 0.4);
     opacity: 0.7;
+    -webkit-transition: 0.5s ease-in;
     transition: 0.5s ease-in;
   }
   .card-of-servise:not(:hover) {
     opacity: 0.8;
+    -webkit-transition: 0.5s ease-in;
     transition: 0.5s ease-in;
   }
   .card-of-servise .circle {
@@ -498,5 +572,8 @@ hr {
   .p-info {
     margin-top: 15px;
     font-size: 1rem;
+  }
+  section {
+    overflow-y: hidden;
   }
 }
