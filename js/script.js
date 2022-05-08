@@ -270,56 +270,5 @@ $(document).ready(function() {
 
 
 
-    // $(window).scroll(function() {
-    //     scrollTracking();
-    // });
 
-    // $(document).ready(function() {
-    //     scrollTracking();
-    // });
-
-
-    //animation of first section img
-    firstSectionImg = $('#first-section-img');
-    var block_show_second = null;
-
-    setTimeout(function scrollTracking() {
-        var wt = $(window).scrollTop();
-        var wh = $(window).height();
-        var et = firstSectionImg.offset().top;
-        var eh = firstSectionImg.outerHeight();
-
-        if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
-            if (block_show_second == null || block_show_second == false) {
-                firstSectionImg.css({
-                    "marginTop": "10vh",
-                    "display": "block",
-
-
-                })
-            }
-            block_show_second = true;
-        }
-    }, 100);
-
-
-
-    //second section animation
-
-    //img animation
-    let myPhoto = $('#my-photo-cont')
-
-
-    // $(window).scroll(function() {
-    //     var wt = $(window).scrollTop();
-    //     var wh = $(window).height();
-    //     var et = myPhoto.offset().top;
-    //     var eh = myPhoto.outerHeight();
-    //     var dh = $(document).height();
-    //     if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
-    //         myPhoto.css({
-    //             "opacity": "1",
-    //         })
-    //     }
-    // });
 });

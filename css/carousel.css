@@ -47,6 +47,7 @@
     position: absolute;
     will-change: transform;
     transition: var(--transition) !important;
+    background-position: top center;
 }
 
 .slider_bg {

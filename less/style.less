@@ -317,16 +317,49 @@ hr {
 
 .first-section-img {
     width: 60vw;
-    margin-top: 80vh;
+    // margin-top: 80vh;
     transition-duration: 2s;
 }
+
+
+
+[data-aos="animation-of-card"] {
+    opacity: 0;
+    transition-property: transform, opacity,;
+    transition-duration: 2s;
+  
+    &.aos-animate {
+      opacity: 1;
+    }
+  
+    @media screen and (min-width: 768px) {
+      transform: translateY(80vh);
+  
+      &.aos-animate {
+        transform: translateY(10vh);
+
+      }
+    }
+    @media screen and (max-width: 767px) {
+        transform: translateY(  0vh);
+    
+        &.aos-animate {
+          transform: translateY(-30vh);
+  
+        }
+    }
+  }
+
+  
+
 
 .bg-blue {
     width: 100%;
     height: 600px;
     background-color: #080b28;
     color: white;
-    padding-top: 50px;
+padding: 50px 25px 0px 25px; 
+   position: relative;
 }
 
 .personal-info {
@@ -349,21 +382,21 @@ hr {
 
 .my-photo {
     width: 15vw;
-    margin-top: 2rem;
+    margin-top: 4rem;
     opacity: 1;
     transition-duration: 2s;
+    &:hover {
+        width: 50%;
+        transition: 1s ease-in-out;
+        width: 15.5vw;
+    }
+    
+    &:not(:hover) {
+        width: 15vw;
+        transition: 0.5s;
+    }
 }
 
-.my-photo:hover {
-    width: 50%;
-    transition: 1s ease-in-out;
-    width: 15.5vw;
-}
-
-.my-photo:not(:hover) {
-    width: 15vw;
-    transition: 0.5s;
-}
 
 
 
@@ -402,15 +435,6 @@ hr {
 
     padding-top: 10%;
 
-    &:hover {
-        background-color: rgba(5, 156, 221, 0.4);
-        opacity: 0.33;
-        transition: 0.5s ease-in;
-    }
-    &:not(:hover) {
-        opacity: 0;
-        transition: 0.5s ease-in;
-    }
     .circle{
         text-align: center;
         width: 88px;
@@ -425,13 +449,56 @@ hr {
     .circle-text{
         font-size: 30px;
     }
+
+    &:hover {
+        background-color: rgba(5, 156, 221, 0.4);
+        opacity: 0.33;
+        transition: 0.5s ease-in;
+
+        .circle{
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+
+
+            margin-top: -5px;
+            transition: 500ms ease-in-out;
+            margin-bottom: 40px;
+
+        }
+        .circle-text{
+            font-size: 33px;
+
+        }
+    }
+    &:not(:hover) {
+        opacity: 0;
+        transition: 0.5s ease-in;
+
+        .circle{
+                 text-align: center;
+        width: 88px;
+        height: 88px;
+        background-color:rgb(5, 156, 221) ;
+        border-radius: 360px;
+        line-height: 88px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+            transition: 500ms ease-in-out;
+
+        }
+        .circle-text{
+            font-size: 30px;
+
+        }
+
+    }
+  
 }
 
 .p-info{
     margin-top: 15px;
 }
-
-
 
 
 
