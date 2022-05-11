@@ -84,7 +84,7 @@
     font-size: calc(var(--sizeindex) * 3.4);
     font-weight: 900;
     display: inline-block;
-    background: linear-gradient(45deg, #080b28, rgb(71, 99, 255), #059cdd);
+    background: linear-gradient(45deg, #040b6e, #0b2a8f, #05a0dd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: 100%;

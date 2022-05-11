@@ -57,20 +57,20 @@ $(document).ready(function() {
             //text animation
             setTimeout(function() {
                 about.show();
-                about.animate({ marginLeft: "75px", display: "block", }, 500)
+                about.animate({ marginLeft: "75px", display: "block", }, 200)
             }, 500);
 
             setTimeout(function() {
                 services.show();
-                services.animate({ marginLeft: "75px", display: "block", }, 500)
+                services.animate({ marginLeft: "75px", display: "block", }, 200)
             }, 1000);
             setTimeout(function() {
                 partfolio.show();
-                partfolio.animate({ marginLeft: "75px", display: "block", }, 500)
+                partfolio.animate({ marginLeft: "75px", display: "block", }, 200)
             }, 1500);
             setTimeout(function() {
                 contact.show();
-                contact.animate({ marginLeft: "75px", display: "block", }, 500)
+                contact.animate({ marginLeft: "75px", display: "block", }, 200)
             }, 2000);
 
 

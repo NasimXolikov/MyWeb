@@ -26,13 +26,13 @@ $(document).ready(function() {
 
         }
 
-        for (i = 0; i < someImgArr.length; i++) {
-            itemWrapperSecond.innerHTML += `
-            <div class="swiper-slide slider__item">
-                <div class="slider__img" data-swiper-parallax="30%" style="background-image: url(${someImgArr[i]}"> </div>
-            </div>
-            `;
-        }
+        // for (i = 0; i < someImgArr.length; i++) {
+        //     itemWrapperSecond.innerHTML += `
+        //     <div class="swiper-slide slider__item">
+        //         <div class="slider__img" data-swiper-parallax="30%" style="background-image: url(${someImgArr[i]}"> </div>
+        //     </div>
+        //     `;
+        // }
 
     }
 
