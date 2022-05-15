@@ -24,7 +24,7 @@
     height: 100%;
     transform: rotate(15deg);
     overflow: visible;
-    top: 15vh;
+    top: 20vh;
 }
 
 .slier__wrapper {
@@ -47,7 +47,16 @@
     position: absolute;
     will-change: transform;
     transition: var(--transition) !important;
-    background-position: top center;
+    background-position: top left;
+}
+
+.slider__item.opened {
+    z-index: 2;
+    transform: rotate(-15deg) scale(1.5);
+    box-shadow: rgb(0 0 0/.75) 0 0 0 10000px;
+    width: 30vw !important;
+    left: -15%;
+    height: 60vh;
 }
 
 .slider_bg {
@@ -61,12 +70,6 @@
 
 .slider_bg .slider__item {
     max-height: 100vh;
-}
-
-.slider__item.opened {
-    z-index: 2;
-    transform: rotate(-15deg) scale(1.5);
-    box-shadow: rgb(0 0 0/.75) 0 0 0 10000px;
 }
 
 .description {

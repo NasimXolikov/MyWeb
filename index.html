@@ -22,6 +22,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -29,106 +30,69 @@
 </head>
 
 <body>
-
     <section>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-lg-12 ">
 
-                    <div class="cont-header_bg">
-                        <div class="header_bg">
-                            <div class="img-overlay">
+        <div class="header_bg ">
+            <div class="img-overlay">
 
-                                <div class="header">
-                                    <div class="container">
-                                        <div class="row">
+                <nav>
+                    <div class="logo">
+                        <img src="img/logo.png" class="logo-img" alt="">
+                    </div>
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
 
-                                            <div class="col-6 col-sm-6 col-lg-3 col-md-3">
-                                                <div class="logo-wrapper">
-                                                    <img src="img/logo.png" alt="" class="logo">
-                                                </div>
-                                            </div>
+                    <ul class="nav-links">
+                        <li class="first-li">
+                            <a href="#">About</a>
+                            <div class="about"></div>
+                        </li>
+                        <li class="second-li">
+                            <a href="#">Services</a>
+                            <div class="services"></div>
 
-                                            <div class="col-6 col-sm-6 d-lg-none d-md-none">
-                                                <div class="burger">
-                                                    <img id="burger" src="img/burger.png" alt="">
-                                                </div>
+                        </li>
+                        <li class="third-li">
+                            <a href="#">Partfolio</a>
+                            <div class="partfolio"></div>
 
-                                            </div>
-                                            <div class="col-12 col-sm-12 d-lg-none d-md-none">
-                                                <div id="nav-cont" class="nav-cont">
-                                                    <div class="about-mob" id="about"> <a href="#info" class="about-link"> About</a> </div>
-                                                    <div class="services-mob" id="services"> Services </div>
-                                                    <div class="partfolio-mob" id="partfolio"> partfolio </div>
-                                                    <div class="contact-mob" id="contact"> contact </div>
+                        </li>
+                        <li class="forth-li">
+                            <a href="#">Contacts</a>
+                            <div class="contacts"></div>
 
-                                                </div>
-                                            </div>
+                        </li>
 
-                                            <div class="col-md-1 col-lg-1 d-xs-none "></div>
+                    </ul>
+                </nav>
 
-                                            <div class=" col-md-2 col-lg-2">
-                                                <div class="about">
-                                                    <a href="#info">About</a>
-                                                    <div class="about-border"></div>
-                                                </div>
-                                            </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
 
-                                            <div class=" col-md-2 col-lg-2">
-                                                <div class="services">
-                                                    <a href="#third-section">services</a>
-                                                    <div class="about-border"></div>
-                                                    <div class="about-border"></div>
+                            <div id="hello-text" class="hello-text"> </div>
+                            <hr>
+                            <div class="welcome-text" data-aos="welcome-text" data-aos-duration="1000">Welcome</div>
+                            <div id="my-text" class="my-text"></div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="first-section-img-cont">
 
-
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-2 col-lg-2">
-                                                <div class="partfolio">
-                                                    <a href="#">Partfolio</a>
-                                                    <div class="about-border"></div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2 col-lg-2">
-                                                <div class="contact">
-                                                    <a href="#">Contact</a>
-                                                    <div class="about-border"></div>
-
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-12 col-sm-12 col-lg-4">
-
-                                                <div class="hello-text" id="hello-text"> </div>
-                                                <hr id="hr-first">
-                                                <div class="welcome-text" id="welcome">Welcome </div>
-                                                <div class="my-text" id="my-text"> </div>
-
-
-                                            </div>
-                                            <div class="col-1 d-md-none d-lg-none"></div>
-                                            <div class="col-lg-8">
-                                                <div class="first-section-img-cont">
-                                                    <img src="img/first_section_img.jpg" alt="" data-aos="animation-of-card" data-aos="fade-up" data-aos-duration='1000' class="first-section-img" id="first-section-img">
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
+                                <img class="first-section-img" data-aos="animation-of-card" data-aos-duration="1000" src="img/first_section_img.jpg">
 
 
                             </div>
                         </div>
+
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
-
 
     <!-- Second section -->
 
@@ -355,7 +319,7 @@
     <script src="https://unpkg.com/typeit@8.2.0/dist/index.umd.js"></script>
 
     <script src="js/carousel.js"></script>
-    <script src="js/aosAdnimations.js"></script>
+    <script src="js/header.js"></script>
     <script src="js/script.js"></script>
 </body>
 

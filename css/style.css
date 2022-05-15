@@ -7,225 +7,11 @@
 }
 body {
   font-family: 'Days One', sans-serif;
+  overflow-x: hidden;
 }
 .container-fluid {
   margin: 0;
   padding: 0;
-}
-.header_bg {
-  background: url(../img/header_bg.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 100vh;
-  background-attachment: fixed;
-}
-.img-overlay {
-  width: 100%;
-  height: 100%;
-  background: #080A21E6;
-}
-.header {
-  height: 60px;
-  border-bottom: 1px solid white;
-}
-.logo-wrapper {
-  display: grid;
-  height: 60px;
-}
-.logo {
-  width: 4rem;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-.about-border {
-  position: absolute;
-  bottom: 20%;
-  width: 0px;
-  height: 2px;
-  background-color: #cc00ff;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-}
-.about {
-  width: 100%;
-  display: grid;
-  height: 60px;
-  margin-left: 2rem;
-  text-align: right;
-  position: relative;
-}
-.about:hover .about-border {
-  position: absolute;
-  bottom: 20%;
-  width: 100%;
-  height: 2px;
-  background-color: #003cff;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-}
-.about a {
-  -ms-flex-item-align: center;
-      align-self: center;
-  justify-self: center;
-  text-transform: uppercase;
-  color: white;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-.about a:hover {
-  color: white;
-}
-.services {
-  width: 100%;
-  display: grid;
-  height: 60px;
-  margin-left: 2rem;
-  text-align: right;
-  position: relative;
-  margin-right: 2rem;
-}
-.services:hover .about-border {
-  position: absolute;
-  bottom: 20%;
-  width: 100%;
-  height: 2px;
-  background-color: #003cff;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-}
-.services a {
-  justify-self: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  text-transform: uppercase;
-  color: white;
-  font-size: 1rem;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-.services a:hover {
-  color: white;
-}
-.partfolio {
-  width: 100%;
-  display: grid;
-  height: 60px;
-  margin-left: 2rem;
-  text-align: right;
-  position: relative;
-  margin-right: 2rem;
-}
-.partfolio:hover .about-border {
-  position: absolute;
-  bottom: 20%;
-  width: 100%;
-  height: 2px;
-  background-color: #003cff;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-}
-.partfolio a {
-  justify-self: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  text-transform: uppercase;
-  color: white;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-.partfolio a:hover {
-  color: white;
-}
-.contact {
-  width: 100%;
-  display: grid;
-  height: 60px;
-  margin-left: 2rem;
-  text-align: right;
-  position: relative;
-  margin-right: 2rem;
-}
-.contact:hover .about-border {
-  position: absolute;
-  bottom: 20%;
-  width: 100%;
-  height: 2px;
-  background-color: #003cff;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-}
-.contact a {
-  justify-self: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  text-transform: uppercase;
-  color: white;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-.contact a:hover {
-  color: white;
-}
-.burger {
-  display: none;
-}
-.nav-cont {
-  width: 100%;
-  height: 0px;
-  background-color: #080b28;
-  background-attachment: fixed;
-  left: 0;
-  display: none;
-}
-.about-mob {
-  color: white;
-  display: block;
-  margin-top: 50px;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-}
-.services-mob {
-  color: white;
-  display: block;
-  margin-top: 50px;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-}
-.partfolio-mob {
-  color: white;
-  display: block;
-  margin-top: 50px;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-}
-.contact-mob {
-  color: white;
-  display: block;
-  margin-top: 50px;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-}
-.about-link {
-  text-decoration: none;
-  color: white;
-}
-.rotate360 {
-  -webkit-animation: mymoveFirst;
-          animation: mymoveFirst;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
 }
 @-webkit-keyframes mymoveFirst {
   0% {
@@ -315,59 +101,8 @@ hr {
   background-color: #01939A;
   width: 130%;
 }
-.welcome-text {
-  margin-top: 100px;
-  font-family: 'Zen Dots', cursive;
-  font-size: 1.4rem;
-  color: white;
-  display: none;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  font-size: 3rem;
-  margin-left: 300px;
-  margin-top: 3rem;
-  font-family: 'Zilla Slab Highlight', cursive;
-  color: #01939A;
-}
 .welcome-text span {
   color: #ffc400;
-}
-.first-section-img {
-  width: 60vw;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-}
-[data-aos="animation-of-card"] {
-  opacity: 0;
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: transform, opacity;
-  transition-property: transform, opacity, -webkit-transform;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-}
-[data-aos="animation-of-card"].aos-animate {
-  opacity: 1;
-}
-@media screen and (min-width: 768px) {
-  [data-aos="animation-of-card"] {
-    -webkit-transform: translateY(80vh);
-            transform: translateY(80vh);
-  }
-  [data-aos="animation-of-card"].aos-animate {
-    -webkit-transform: translateY(10vh);
-            transform: translateY(10vh);
-  }
-}
-@media screen and (max-width: 767px) {
-  [data-aos="animation-of-card"] {
-    -webkit-transform: translateY(0vh);
-            transform: translateY(0vh);
-  }
-  [data-aos="animation-of-card"].aos-animate {
-    -webkit-transform: translateY(-30vh);
-            transform: translateY(-30vh);
-  }
 }
 .bg-blue {
   width: 100%;
@@ -490,35 +225,11 @@ hr {
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  .header_bg {
-    background: url(../img/header_bg.jpg);
-    background-size: 350%;
-    background-repeat: no-repeat;
-    height: 700px;
-    background-attachment: fixed;
-  }
   .logo-wrapper {
     width: 100%;
     height: 60px;
     display: grid;
     padding-left: 15px;
-  }
-  .logo {
-    width: 3rem;
-    -ms-flex-item-align: center;
-        align-self: center;
-  }
-  .about {
-    display: none;
-  }
-  .services {
-    display: none;
-  }
-  .partfolio {
-    display: none;
-  }
-  .contact {
-    display: none;
   }
   .burger {
     display: block;
