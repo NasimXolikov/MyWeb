@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-    let carouselSlidersImg = ['img/first.jpg', 'img/second.jpg', 'img/1.png', 'img/third.jpg', 'img/fourth.jpg'];
+    let carouselSlidersImg = ['img/1.png', 'img/2.png', 'img/second.jpg', 'img/third.jpg', 'img/fourth.jpg'];
 
     let itemWrapperFirst = document.querySelector('.slier__wrapper_first');
     let itemWrapperSecond = document.querySelector('.slier__wrapper_second');
@@ -66,22 +66,21 @@ $(document).ready(function() {
 
     });
     swiper.controller.control = swiperBg;
-
-
     document.querySelectorAll('.slider__item').forEach(item =>
         item.addEventListener('click', (event) => {
             let attr;
+            let galleryImg = $('.slider__img')
             if (item.classList.contains('opened')) {
-                item.classList.remove('opened')
-                $('.slider__img').css({
+                item.classList.remove('opened');
+                galleryImg.attr('data-swiper-parallax', '20%');
+                galleryImg.css({
                     'left': '-25%',
                 })
 
-
-                ;
             } else {
                 item.classList.add(`opened`)
-                $('.slider__img').css({
+                galleryImg.attr('data-swiper-parallax', '0%');
+                galleryImg.css({
                     'left': '0%',
                     'width': '100%',
                 });
