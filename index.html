@@ -235,72 +235,29 @@
 
 
     <section class="carousel-section">
-
-        <div class="img-overlay">
-
-            <div class="description">
-                <div class="logo">Partfolio</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi deleniti laudantium qui asperiores obcaecati, corporis eveniet autem accusantium sapiente perferendis eum quam provident distinctio. Voluptatem alias eos officiis cupiditate
-                    tempore?
-                </p>
-            </div>
-            <!-- Slider main container -->
-            <div class="swiper slider slider_main">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper slier__wrapper_first">
-                    <!-- Slides -->
-
-                    <!-- <div class="swiper-slide slider__item">
-                    <div class="slider__img" data-swiper-parallax="30%" style="background-image: url(img/second.jpg);"> </div>
-                </div>
-                <div class="swiper-slide slider__item">
-                    <div class="slider__img" data-swiper-parallax="20%" style="background-image: url(img/1.png);"> </div>
-                </div>
-
-                <div class="swiper-slide slider__item">
-                    <div class="slider__img" data-swiper-parallax="20%" style="background-image: url(img/third.jpg);"> </div>
-                </div>
-                <div class="swiper-slide slider__item">
-                    <div class="slider__img" data-swiper-parallax="30%" style="background-image: url(img/fourth.jpg);"> </div>
-                </div>
-                <div class="swiper-slide slider__item">
-                    <div class="slider__img" data-swiper-parallax="20%" style="background-image: url(img/sixth.jpg);"> </div>
-                </div> -->
-
-
-                </div>
-            </div>
-
-            <div class="swiper slider slider_bg">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper slier__wrapper_second">
-
-                    <!-- <div class="swiper-slide slider__item">
-                    <div class="slider__img" data-swiper-parallax="15%" style="background-image: url(img/second.jpg);"> </div>
-                </div>
-                <div class="swiper-slide slider__item">
-                    <div class="slider__img" data-swiper-parallax="20%" style="background-image: url(img/1.png);"> </div>
-                </div>
-
-                <div class="swiper-slide slider__item">
-                    <div class="slider__img" data-swiper-parallax="15%" style="background-image: url(img/third.jpg);"> </div>
-                </div>
-                <div class="swiper-slide slider__item">
-                    <div class="slider__img" data-swiper-parallax="20%" style="background-image: url(img/fourth.jpg);"> </div>
-                </div>
-                <div class="swiper-slide slider__item">
-                    <div class="slider__img" data-swiper-parallax="15%" style="background-image: url(img/sixth.jpg);"> </div>
-                </div> -->
-
-                </div>
-            </div>
+        <div class="wrapper">
+            <div class="box b1"></div>
+            <div class="box b2"></div>
+            <div class="box b3"></div>
+            <div class="box b4"></div>
+            <div class="box b5"></div>
+            <div class="box b6"></div>
         </div>
     </section>
 
 
 
 
+    <script type="text/javascript">
+        let box = document.querySelector('.wrapper');
+        let sides = document.querySelectorAll('.box');
 
+        sides.forEach((side, i) => {
+            side.addEventListener('click'), () => {
+                box.style.transform = `rotateX(-15deg) rotateY(-${i*60}deg)`;
+            }
+        })
+    </script>
 
 
 
@@ -325,7 +282,6 @@
     -->
     <script src="https://unpkg.com/typeit@8.2.0/dist/index.umd.js"></script>
 
-    <script src="js/carousel.js"></script>
     <script src="js/header.js"></script>
     <script src="js/script.js"></script>
 </body>
