@@ -1,6 +1,24 @@
 * {
   box-sizing: border-box;
 }
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #010651 #ffffff;
+}
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #010651;
+  border-radius: 50px;
+  border: 20px none #06005c;
+}
 .row {
   --bs-gutter-x: 0rem;
 }
@@ -116,7 +134,7 @@ hr {
   margin-bottom: 10vh;
 }
 .card-of-servise {
-  width: 80% ;
+  width: 80%;
   height: 300px;
   text-align: center;
   color: whitesmoke;
@@ -173,6 +191,9 @@ hr {
   body {
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .logo-img {
+    width: 30%;
   }
   .logo-wrapper {
     width: 100%;

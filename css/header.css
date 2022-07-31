@@ -16,7 +16,7 @@ nav {
   background: #080A21E6;
 }
 .logo-img {
-  width: 4rem;
+  width: 10vw;
 }
 .header_bg {
   background: url(../img/header_bg.jpg);
@@ -24,6 +24,7 @@ nav {
   background-repeat: no-repeat;
   height: 100vh;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 .nav-links {
   display: flex;
