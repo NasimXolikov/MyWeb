@@ -16,14 +16,14 @@ nav {
   background: #080A21E6;
 }
 .logo-img {
-  width: 4rem;
+  width: 10vw;
 }
 .header_bg {
-  background: url(../img/header_bg.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   height: 100vh;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 .nav-links {
   display: flex;
@@ -189,6 +189,7 @@ nav {
   margin-top: 3rem;
   font-family: 'Zilla Slab Highlight', cursive;
   color: #01939A;
+  z-index: -1;
 }
 [data-aos="welcome-text"] {
   opacity: 0;
@@ -278,5 +279,8 @@ nav {
   .header_bg {
     background-size: cover;
     height: 800px;
+  }
+  .delWelcomeText {
+    display: none;
   }
 }

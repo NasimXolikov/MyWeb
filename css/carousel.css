@@ -1,107 +1,199 @@
 * {
+    margin    : 0;
+    padding   : 0;
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-
-:root {
-    --dark: #070707;
-    --transition: .75s cubic-bezier(.2, .6, 0, 1);
-    --sizeindex: calc(1vw + 1vh);
 }
 
 .carousel-section {
-    height: 1000px;
-    width: 100%;
-    background-color: var(--dark);
-    color: white;
-    position: relative;
-    z-index: 10;
-    overflow: hidden;
+    padding         : 1rem;
+    width           : 100vw;
+    background-color: rgb(4, 3, 27);
+    height          : 100vh;
 }
 
-.slider {
-    height: 100%;
-    transform: rotate(15deg);
-    overflow: visible;
-    top: 20vh;
+.swiper {
+    width : 100%;
+    height: 90vh;
 }
 
-.slier__wrapper {
-    transition: var(--transition)!important;
-    will-change: transform;
+.swiper-scrollbar-drag {
+    background: #ffc400;
 }
 
-.slider__item {
-    max-height: 75vh;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform var(--transition), box-shadow var(--transition);
+.swiper-scrollbar {
+    background: #fff;
+
 }
 
-.slider__img {
-    width: 125%;
-    height: 100%;
-    background-size: cover;
-    left: -25%;
+.partfolio-img-pc {
+    width: 70%;
+}
+
+.partfolio-img-phone {
+    width: 50%;
+}
+
+.partfolio-img-cont {
+    width          : 100%;
+    height         : 90vh;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.partfolio-phone-cont {
+    width      : 100%;
+    height     : 90vh;
+    display    : flex;
+    align-items: center;
+    text-align : left;
+}
+
+
+.partfolio-text {
+    text-align  : left;
+    padding-left: 5vw;
+    padding-top : 2vw;
+
+    color    : white;
+    font-size: 1.5vw;
+}
+
+.swiper-pagination-vertical {
+    background-color: white;
+}
+
+.title-of-slider {
+    margin-top   : 30vh;
+    margin-bottom: 3vh;
+    padding-left : 5vw;
+    color        : #ffc400;
+    font-size    : 3vw;
+}
+
+.slider-first-textblock {
+    padding-left: 5vw;
+    color       : rgb(255, 255, 255);
+    line-height : 4vh;
+    text-align  : justify;
+}
+
+.swiper-btn {
+    text-align   : right;
+    right: 10vw;
+    top: -4.5vh;
     position: absolute;
-    will-change: transform;
-    transition: var(--transition) !important;
-    background-position: top left;
+
 }
 
-.slider__item.opened {
-    z-index: 2;
-    transform: rotate(-15deg) scale(1.5);
-    box-shadow: rgb(0 0 0/.75) 0 0 0 10000px;
-    width: 30vw !important;
-    left: -15%;
-    height: 60vh;
+.swiper-btn button {
+    width        : 5vw;
+    height       : 5vw;
+    border-radius: 360px;
+    background   : none;
+    border       : 2px rgb(5, 156, 221);
+    border-style : solid;
+    color        : rgb(5, 156, 221);
+    transition   : 1s ease;
+
+
 }
 
-.slider_bg {
-    z-index: 0;
-    transform: rotate(-20deg);
-    top: -150vh;
-    left: 5%;
-    opacity: 0.15;
-    filter: blur(120px) saturate(5);
+.swiper-btn button:hover {
+
+    width        : 5.5vw;
+    height       : 5.5vw;
+    border-radius: 360px;
+    border       : 2px rgb(5, 156, 221);
+    border-style : solid;
+    color        : rgb(255, 255, 255);
+    transition   : 1s ease;
+
 }
 
-.slider_bg .slider__item {
-    max-height: 100vh;
+
+
+@media screen and (max-width: 767px) {
+    .partfolio-img-pc {
+        width: 100%;
+    }
+    
+    .partfolio-img-phone {
+        width: 70%;
+    }
+
+
+
+    .partfolio-img-cont {
+    width          : 100%;
+    height         : 100%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
 }
 
-.description {
-    font-size: calc(var(--sizeindex) * 0.8);
+.partfolio-phone-cont {
+    width      : 100%;
+    height         : 100%;
+    display    : flex;
+    align-items    : center;
+}
+
+.slider-first-textblock {
+    padding-left: 5vw;
+    color       : rgb(255, 255, 255);
+    line-height : 4vh;
+    text-align  : justify;
+    margin-bottom: 10vh;
+}
+
+.title-of-slider {
+    margin-top   : 7.5vh;
+    margin-bottom: 4vh;
+    padding-left : 5vw;
+    color        : #ffc400;
+    font-size    : 7.5vw;
+}
+
+.partfolio-text {
+    text-align  : left;
+    padding-left: 5vw;
+    padding-top : 2vw;
+
+    color    : white;
+    font-size: 5vw;
+}
+
+.swiper-btn {
+    text-align   : right;
+    right: 10vw;
+    top: -5vh;
     position: absolute;
-    top: 20vh;
-    left: 8vw;
-    max-width: 24vw;
-    opacity: 0.9;
-    transition: opacity var(--transition), transform var(--transition);
-    transition-duration: 3s;
+
+}
+.swiper-btn button {
+    width        : 10vw;
+    height       : 10vw;
+    border-radius: 360px;
+    background   : none;
+    border       : 2px rgb(5, 156, 221);
+    border-style : solid;
+    color        : rgb(5, 156, 221);
+    transition   : 1s ease;
+
+
 }
 
-.description .logo {
-    font-size: calc(var(--sizeindex) * 3.4);
-    font-weight: 900;
-    display: inline-block;
-    background: linear-gradient(45deg, #040b6e, #0b2a8f, #05a0dd);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: 100%;
+.swiper-btn button:hover {
+    width        : 12vw;
+    height       : 12vw;
+    border-radius: 360px;
+    border       : 2px rgb(5, 156, 221);
+    border-style : solid;
+    color        : rgb(255, 255, 255);
+    transition   : 1s ease;
+
 }
 
-.description p {
-    transition: var(--transition);
-    margin-top: 3vh;
-    opacity: .9;
-    transform: translateY(2vh);
-}
 
-.description.hidden {
-    opacity: 0;
-    transition: var(--transition);
-    transform: translateY(5vh);
 }
