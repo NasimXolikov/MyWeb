@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
 }
-@blue-background: #080A1F;
+@blue-background: rgb(4, 3, 27);
 @yellow-text: #ffc400;
 nav{
     height: 10vh;
@@ -26,7 +26,6 @@ nav{
 }
 
 .header_bg {
-    background: url(../img/header_bg.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     height: 100vh;
@@ -238,6 +237,7 @@ nav{
     margin-top: 3rem;
     font-family: 'Zilla Slab Highlight', cursive;
     color: #01939A;
+    z-index: -1;
   }
 
     [data-aos="welcome-text"] {
@@ -342,5 +342,8 @@ nav{
     .header_bg{
         background-size: cover;
         height: 800px;
+    }
+    .delWelcomeText{
+        display: none;
     }
 }

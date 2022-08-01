@@ -40,10 +40,12 @@ $(document).ready(function() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const links = document.querySelectorAll('.nav-links li');
+    const welcomeText=document.querySelector('.welcome-text');
 
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('open');
         document.body.classList.toggle('scroll-block')
+            welcomeText.classList.toggle('delWelcomeText');
         links.forEach(item => {
             item.classList.toggle('fade');
         });
