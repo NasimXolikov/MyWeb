@@ -17,6 +17,9 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-scrollbar',
     },
     
+    parallax: true,
+    speed:1000,
+   
 
 
 });

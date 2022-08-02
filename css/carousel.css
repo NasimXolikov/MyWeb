@@ -55,7 +55,7 @@
     padding-left: 5vw;
     padding-top : 2vw;
 
-    color    : white;
+    color    : #ffc400;
     font-size: 1.5vw;
 }
 
@@ -67,7 +67,7 @@
     margin-top   : 30vh;
     margin-bottom: 3vh;
     padding-left : 5vw;
-    color        : #ffc400;
+    color        : rgb(5, 156, 221);
     font-size    : 3vw;
 }
 
@@ -151,7 +151,7 @@
     margin-top   : 7.5vh;
     margin-bottom: 4vh;
     padding-left : 5vw;
-    color        : #ffc400;
+    color        : rgb(5, 156, 221);
     font-size    : 7.5vw;
 }
 
@@ -160,14 +160,14 @@
     padding-left: 5vw;
     padding-top : 2vw;
 
-    color    : white;
+    color    : #ffc400;
     font-size: 5vw;
 }
 
 .swiper-btn {
     text-align   : right;
     right: 10vw;
-    top: -5vh;
+    top: -2.5vh;
     position: absolute;
 
 }
