@@ -3,30 +3,30 @@
 }
 
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
+/* Firefox */
+* {
     scrollbar-width: auto;
     scrollbar-color: #010651 #ffffff;
-  }
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
     width: 10px;
-  }
+}
 
-  *::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: #ffffff;
-  }
+}
 
-  *::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: #010651;
-    border-radius: 50px;
-    border: 20px none #06005c;
-  }
+    border-radius   : 50px;
+    border          : 20px none #06005c;
+}
 
 
-  @blue-background: rgb(4, 3, 27);
-@yellow-text: #ffc400;
+@blue-background: rgb(4, 3, 27);
+@yellow-text    : #ffc400;
 ;
 
 
@@ -114,9 +114,9 @@ hr {
     width           : 100%;
     height          : 600px;
     background-color: @blue-background;
-    color   : white;
-    padding : 50px 25px 0px 25px;
-    position: relative;
+    color           : white;
+    padding         : 50px 25px 0px 25px;
+    position        : relative;
 }
 
 .personal-info {
@@ -178,7 +178,7 @@ hr {
 
 .services-inThird-section {
     text-align   : center;
-    color        : whitesmoke;
+    color        : #ffc400;
     font-size    : 35px;
     margin-bottom: 10vh;
 }
@@ -254,12 +254,175 @@ hr {
     margin-top: 15px;
 }
 
+.phone-number-block {
+    margin-top: 7.5vh;
+
+    p {
+        color    : white;
+        font-size: 1.5vw;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+.form-title {
+    color    : white;
+    font-size: 1.5vw;
+}
+
+
+////footer section
+
+
+.contact-section {
+    width                 : 100%;
+    height                : 80vh;
+    background-color      : @blue-background;
+    // background-image: url(../img/Ghost_in_the_Machine.webp);
+    // background-position: center;
+    // background-size: cover;
+
+    -webkit-box-shadow: 0px -11px 20px -6px rgba(40, 169, 227, 0.73);
+    -moz-box-shadow   : 0px -11px 20px -6px rgba(40, 169, 227, 0.73);
+    box-shadow        : 0px -11px 20px -6px rgba(40, 169, 227, 0.73);
+}
 
 
 
 
 
 
+.contactMe-cont {
+    padding-top: 75px;
+}
+
+.contact-title {
+    color         : #ffc400;
+    font-size     : 2.2vw;
+    text-transform: uppercase;
+}
+
+
+.discuss-text {
+    color: white;
+}
+
+
+
+form {
+    margin-top: 50px;
+
+    button {
+        width           : 50%;
+        height          : 40px;
+        background-color: #ffc400;
+        border-radius   : 50px;
+        float           : right;
+        display         : block;
+        text-transform  : uppercase;
+        font-weight     : 900;
+    }
+}
+
+.inp-name {
+    width           : 100%;
+    height          : 40px;
+    border-radius   : 50px;
+    padding         : 5px;
+    border          : 2px solid black;
+    background-color: rgb(10, 122, 170);
+    color           : white;
+    margin-bottom   : 2.5vh;
+}
+
+.inp-name:focus {
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: white;
+}
+
+
+
+
+
+
+footer {
+    height          : 30vh;
+    background-color: rgb(8, 11, 32);
+}
+
+
+.footer-logo-cont {
+    height         : 30vh;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.footer-logo {
+    width: 100%;
+}
+
+.more {
+    color     : white;
+    margin-top: 7.5vh;
+    text-align: center;
+
+}
+
+.more-cont {
+    margin-top     : 30px;
+    display        : flex;
+    justify-content: space-between;
+    a{
+        text-decoration: none;
+    }
+
+}
+
+.footer-about {
+    color: white;
+
+}
+
+.insta:hover {
+    color     : rgb(255, 0, 234);
+    transition: .3s ease;
+    transform : scale(1.2);
+}
+
+.insta:not(:hover) {
+    color     : white;
+    transition: .3s ease;
+    transform : scale(1);
+}
+
+.git:hover{
+    color     : black;
+    transition: .3s ease;
+    transform : scale(1.2);
+}
+.git:not(:hover){
+    color     : white;
+    transition: .3s ease;
+    transform : scale(1);
+}
+.telega:hover{
+    color     : rgb(15, 150, 228);
+    transition: .3s ease;
+    transform : scale(1.2);
+}
+.telega:not(:hover){
+    color     : white;
+    transition: .3s ease;
+    transform : scale(1);
+}
 
 
 @media screen and (max-width: 767px) {
@@ -417,11 +580,58 @@ hr {
     section {
         overflow-y: hidden;
     }
-    
-    .header-overlay{
-        width: 100%;
-        height: 100%;
-        background: #080A21E6; 
+
+    .header-overlay {
+        width     : 100%;
+        height    : 100%;
+        background: #080A21E6;
     }
 
+    footer {
+        height          : auto;
+        background-color: rgb(8, 11, 32);
+    }
+    
+    
+    .footer-logo-cont {
+        height         : auto;
+        display        : block;
+       text-align: center;
+    }
+    
+    .footer-logo {
+        width: 40%;
+        margin-top: 10px;
+    }
+
+    .more-cont {
+        margin-bottom: 20px;
+    
+    }
+
+
+    .contact-title {
+        color         : #ffc400;
+        font-size     : 5vw;
+        text-transform: uppercase;
+    }
+
+
+    .phone-number-block {
+        margin-top: 7.5vh;
+    
+        p {
+            color    : white;
+            font-size: 3vw;
+        }
+    
+     
+    }
+    
+
+    .form-title {
+        color    : white;
+        font-size: 4vw;
+    }
+    
 }

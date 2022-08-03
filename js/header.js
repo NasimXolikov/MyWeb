@@ -1,16 +1,16 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
 
     //animation of text
 
-    setTimeout(function() {
+    setTimeout(function () {
         new TypeIt("#hello-text", {
-                speed: 100,
-                waitUntilVisible: true,
-                afterComplete: function(instance) {
-                    instance.destroy();
-                }
-            })
+            speed: 100,
+            waitUntilVisible: true,
+            afterComplete: function (instance) {
+                instance.destroy();
+            }
+        })
             .type(`Hello world!`, { delay: 1000 })
             .move(-12)
             .type('<span>[</span>')
@@ -18,17 +18,17 @@ $(document).ready(function() {
             .type('<span>]</span>')
 
 
-        .go();
+            .go();
     }, 100);
 
-    setTimeout(function() {
+    setTimeout(function () {
         new TypeIt("#my-text", {
-                speed: 50,
-                waitUntilVisible: true,
-                afterComplete: function(instance) {
-                    instance.destroy();
-                }
-            })
+            speed: 50,
+            waitUntilVisible: true,
+            afterComplete: function (instance) {
+                instance.destroy();
+            }
+        })
             .type(`This is my personal site`, { delay: 1000 })
             .type(', <br>you can get to know my skills and work more closely.')
             .go();
@@ -40,12 +40,12 @@ $(document).ready(function() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const links = document.querySelectorAll('.nav-links li');
-    const welcomeText=document.querySelector('.welcome-text');
+    const welcomeText = document.querySelector('.welcome-text');
 
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('open');
         document.body.classList.toggle('scroll-block')
-            welcomeText.classList.toggle('delWelcomeText');
+        welcomeText.classList.toggle('delWelcomeText');
         links.forEach(item => {
             item.classList.toggle('fade');
         });
@@ -53,8 +53,56 @@ $(document).ready(function() {
     })
 
 
+    const infoLink = document.querySelector('#info-link')
+    const serviceLink = document.querySelector('#service-link')
+    const carouselSection = document.querySelector('#carousel-link')
+    const contactLink = document.querySelector('#contact-link')
 
 
+    infoLink.addEventListener('click', () => {
+        if (navLinks.classList.contains('open') == true) {
+            navLinks.classList.toggle('open');
+            document.body.classList.toggle('scroll-block')
+            welcomeText.classList.toggle('delWelcomeText');
+            links.forEach(item => {
+                item.classList.toggle('fade');
+            });
+
+        }
+    });
+    serviceLink.addEventListener('click', () => {
+        if (navLinks.classList.contains('open') == true) {
+            navLinks.classList.toggle('open');
+            document.body.classList.toggle('scroll-block')
+            welcomeText.classList.toggle('delWelcomeText');
+            links.forEach(item => {
+                item.classList.toggle('fade');
+            });
+
+        }
+    });
+    carouselSection.addEventListener('click', () => {
+        if (navLinks.classList.contains('open') == true) {
+            navLinks.classList.toggle('open');
+            document.body.classList.toggle('scroll-block')
+            welcomeText.classList.toggle('delWelcomeText');
+            links.forEach(item => {
+                item.classList.toggle('fade');
+            });
+
+        }
+    });
+    contactLink.addEventListener('click', () => {
+        if (navLinks.classList.contains('open') == true) {
+            navLinks.classList.toggle('open');
+            document.body.classList.toggle('scroll-block')
+            welcomeText.classList.toggle('delWelcomeText');
+            links.forEach(item => {
+                item.classList.toggle('fade');
+            });
+
+        }
+    });
 
     //animated  text
 
