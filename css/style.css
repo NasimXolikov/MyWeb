@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
@@ -30,29 +31,72 @@ body {
   margin: 0;
   padding: 0;
 }
-@keyframes mymoveFirst {
+@-webkit-keyframes mymoveFirst {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   /* можно назвать "шаг 2" */
   100% {
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
     transition: transform 1s;
-    transform: rotate(360deg);
+    transition: transform 1s, -webkit-transform 1s;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes mymoveFirst {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  /* можно назвать "шаг 2" */
+  100% {
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 .rotate-360 {
-  animation: mymoveSecond;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
+  -webkit-animation: mymoveSecond;
+          animation: mymoveSecond;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
-@keyframes mymoveSecond {
+@-webkit-keyframes mymoveSecond {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   /* можно назвать "шаг 2" */
   100% {
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
     transition: transform 1s;
-    transform: rotate(-360deg);
+    transition: transform 1s, -webkit-transform 1s;
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+@keyframes mymoveSecond {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  /* можно назвать "шаг 2" */
+  100% {
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
   }
 }
 .hello-text {
@@ -104,15 +148,18 @@ hr {
   width: 15vw;
   margin-top: 4rem;
   opacity: 1;
-  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
 }
 .my-photo:hover {
   width: 50%;
+  -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
   width: 15.5vw;
 }
 .my-photo:not(:hover) {
   width: 15vw;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .third-section {
@@ -158,16 +205,19 @@ hr {
 .card-of-servise:hover {
   background-color: rgba(5, 156, 221, 0.4);
   opacity: 0.33;
+  -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
 }
 .card-of-servise:hover .circle {
   line-height: 90px;
   margin-top: -10px;
+  -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
   margin-bottom: 40px;
 }
 .card-of-servise:not(:hover) {
   opacity: 0;
+  -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
 }
 .card-of-servise:not(:hover) .circle {
@@ -179,6 +229,7 @@ hr {
   line-height: 88px;
   margin: 0 auto;
   margin-bottom: 30px;
+  -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
 }
 .card-of-servise:not(:hover) .circle-text {
@@ -206,7 +257,6 @@ hr {
   height: 80vh;
   background-color: #04031b;
   -webkit-box-shadow: 0px -11px 20px -6px rgba(40, 169, 227, 0.73);
-  -moz-box-shadow: 0px -11px 20px -6px rgba(40, 169, 227, 0.73);
   box-shadow: 0px -11px 20px -6px rgba(40, 169, 227, 0.73);
 }
 .contactMe-cont {
@@ -256,9 +306,15 @@ footer {
 }
 .footer-logo-cont {
   height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .footer-logo {
   width: 100%;
@@ -270,8 +326,12 @@ footer {
 }
 .more-cont {
   margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .more-cont a {
   text-decoration: none;
@@ -281,33 +341,45 @@ footer {
 }
 .insta:hover {
   color: #ff00ea;
+  -webkit-transition: .3s ease;
   transition: .3s ease;
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .insta:not(:hover) {
   color: white;
+  -webkit-transition: .3s ease;
   transition: .3s ease;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .git:hover {
   color: black;
+  -webkit-transition: .3s ease;
   transition: .3s ease;
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .git:not(:hover) {
   color: white;
+  -webkit-transition: .3s ease;
   transition: .3s ease;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .telega:hover {
   color: #0f96e4;
+  -webkit-transition: .3s ease;
   transition: .3s ease;
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .telega:not(:hover) {
   color: white;
+  -webkit-transition: .3s ease;
   transition: .3s ease;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 @media screen and (max-width: 767px) {
   body {
@@ -331,7 +403,8 @@ footer {
   }
   .burger img {
     width: 2rem;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     justify-self: end;
     position: relative;
     left: -15px;
@@ -355,7 +428,8 @@ footer {
   .first-section-img {
     width: 100%;
     margin-top: 250px;
-    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
   }
   .bg-blue {
     width: 100%;
@@ -379,7 +453,8 @@ footer {
     width: 70%;
     margin-top: 2rem;
     margin-left: 0px;
-    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
   }
   hr {
     width: 100%;
@@ -402,10 +477,12 @@ footer {
   .card-of-servise:hover {
     background-color: rgba(5, 156, 221, 0.4);
     opacity: 0.7;
+    -webkit-transition: 0.5s ease-in;
     transition: 0.5s ease-in;
   }
   .card-of-servise:not(:hover) {
     opacity: 0.8;
+    -webkit-transition: 0.5s ease-in;
     transition: 0.5s ease-in;
   }
   .card-of-servise .circle {
